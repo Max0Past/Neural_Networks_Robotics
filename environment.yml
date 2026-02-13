@@ -1,0 +1,21 @@
+name: tf_gpu_env
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  # Базові бібліотеки для Data Science
+  - python=3.11
+  - pandas
+  - numpy
+  - matplotlib
+  - seaborn
+  - scikit-learn
+  - jupyterlab  # Корисно для ноутбуків, можна прибрати якщо не треба
+  - pip
+  
+  # TensorFlow та Keras через pip (рекомендований метод для GPU support)
+  - pip:
+      # [and-cuda] автоматично завантажує сумісні бібліотеки NVIDIA (cuDNN, etc.)
+      # в середовище, щоб версія TF збігалася з версією CUDA
+      - tensorflow[and-cuda] 
+      - keras
