@@ -1,0 +1,7 @@
+*.code-workspace
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.keras
+.vscode/
